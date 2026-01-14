@@ -1,0 +1,21 @@
+.home-page {
+  background-color: rgb(37, 37, 147);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.search-section {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .search-section {
+    width: 100%; /* wider on mobile */
+  }
+}
+.row1 {
+  background-image: url(/src/assets/images/bg-today-large.svg);
+  background-size: cover;
+}
