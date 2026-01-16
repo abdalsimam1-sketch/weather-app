@@ -2,8 +2,13 @@
   background-color: rgb(37, 37, 147);
   background-size: cover;
   min-height: 100vh;
+  width: 100%;
 }
-
+.weather-main-card {
+  background-image: url(../src/assets/images/bg-today-large.svg);
+  background-repeat: no-repeat;
+  min-height: 150px;
+}
 .search-section {
   width: 60%;
   margin: 0 auto;
@@ -15,7 +20,19 @@
     width: 100%; /* wider on mobile */
   }
 }
-.row1 {
-  background-image: url(/src/assets/images/bg-today-large.svg);
-  background-size: cover;
+.stat-card,
+.daily-card,
+.hourly-card,
+.weather-right {
+  background-color: rgba(255, 255, 255, 0.092);
+  border-radius: 1rem;
+}
+.weather-right {
+}
+.stat-grid {
+  min-height: 120px;
+  width: 100%;
+}
+.daily-forecast {
+  min-height: 120px;
 }
