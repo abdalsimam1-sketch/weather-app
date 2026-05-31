@@ -1,0 +1,27 @@
+.home-page {
+  color: white;
+  background-color: #02012c;
+  min-height: 100vh;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.unit-button {
+  background-color: #262540;
+}
+.units-dropdown {
+  background-color: #262540;
+  right: 2rem;
+  top: 3rem;
+}
+.section-heading {
+  opacity: 0.4;
+}
+button {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.active-unit {
+  background-color: hsl(243, 23%, 30%);
+}
