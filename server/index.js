@@ -6,6 +6,7 @@ const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 const errorhandler = require("./middleware/errorHandler");
 const notFound = require("./middleware/notFound");
+const weatherRouter = require("./routes/weatherRoutes");
 
 const port = process.env.PORT || 3000;
 
@@ -23,6 +24,7 @@ app.use(
 );
 
 //mount routes
+app.use("/api/v1/weather", weatherRouter);
 
 //error handling middlware
 app.use(notFound);
