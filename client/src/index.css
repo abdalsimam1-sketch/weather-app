@@ -1,27 +1,43 @@
+:root {
+  /* Blue */
+  --blue-500: #4658d9;
+  --blue-750: #2b1b9c;
+  --blue-900: #02012c;
+  --blue-800: #262540;
+  --blue-700: #302f4a;
+  --blue-600: #3c3b5e;
+  --blue-300: #acacb7;
+  --blue-200: #d4d3d9;
+  --white: #ffffff;
+
+  /* Orange */
+  --orange: #ff820a;
+}
+
 .home-page {
   color: white;
-  background-color: #02012c;
+  background-color: var(--blue-900);
   min-height: 100vh;
 }
 .cursor-pointer {
   cursor: pointer;
 }
 .unit-button {
-  background-color: #262540;
+  background-color: var(--blue-800);
 }
 .units-dropdown {
-  background-color: #262540;
+  background-color: var(--blue-800);
   right: 2rem;
   top: 3rem;
 }
-.section-heading {
+.opacity {
   opacity: 0.4;
 }
 button {
   background-color: transparent;
-  color: white;
+  color: var(--white);
   border: none;
 }
 .active-unit {
-  background-color: hsl(243, 23%, 30%);
+  background-color: var(--blue-600);
 }

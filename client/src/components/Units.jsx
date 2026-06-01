@@ -9,7 +9,7 @@ export const Units = ({ unit, switchUnits }) => {
 
       {unitData.map((item) => (
         <div key={item.label}>
-          <span className="section-heading">{item.label}</span>
+          <span className="opacity">{item.label}</span>
           <div
             className={`rounded p-1 ${unit === "metric" ? "active-unit" : ""} d-flex justify-content-between`}
           >
