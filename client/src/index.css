@@ -41,3 +41,22 @@ button {
 .active-unit {
   background-color: var(--blue-600);
 }
+
+.input-section {
+  max-width: 600px;
+  width: 95%;
+}
+
+.main-weather-section {
+  min-height: 200px;
+  background-image: url(./assets/images/bg-today-small.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
+}
+
+@media (min-width: 768px) {
+  main-weather-section {
+    background-image: url(./assets/images/bg-large-small.svg);
+  }
+}
