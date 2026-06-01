@@ -6,3 +6,7 @@ export const formatFullDate = (date) => {
     day: "numeric",
   });
 };
+
+export const getWeekDay = (date) => {
+  return new Date(date).toLocaleDateString("en-US", { weekday: "short" });
+};

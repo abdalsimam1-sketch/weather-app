@@ -3,10 +3,11 @@ import { Units } from "../components/Units";
 import { useUnit } from "../hooks/useUnit";
 import { weatherData } from "../data/weatherData";
 import { useState } from "react";
-import sunny from "../assets/images/icon-sunny.webp";
 import { formatFullDate } from "../helper functions/formatDate";
 import { useCurrentStat } from "../hooks/useCurrentStat";
 import { CurrentStatCard } from "../components/CurrentStatCard";
+import { getWeekDay } from "../helper functions/formatDate";
+import { weatherCodeToIcon } from "../helper functions/weatherIcon";
 
 export const Home = () => {
   const { unitOpen, toggleUnits, unit, switchUnits } = useUnit();
@@ -17,7 +18,7 @@ export const Home = () => {
   };
   return (
     <div className="home-page">
-      <main className="container pt-5 d-flex flex-column gap-3">
+      <main className="container pt-5 d-flex flex-column gap-3 pb-lg-5">
         <header className="d-flex justify-content-between">
           <img src={logo} alt="logo" />
           <div className="position-relative">
@@ -67,7 +68,13 @@ export const Home = () => {
                 <span>{formatFullDate(weatherData.data.current.time)}</span>
               </div>
               <div className="d-flex align-items-center gap-5">
-                <img src={sunny} alt="sunny" style={{ width: "5rem" }} />
+                <img
+                  src={weatherCodeToIcon(
+                    weatherData.data.daily[0].weather_code,
+                  )}
+                  alt="sunny"
+                  style={{ width: "5rem" }}
+                />
                 <h1>{weatherData.data.current.temperature_2m}&deg;</h1>
               </div>
             </div>
@@ -83,7 +90,30 @@ export const Home = () => {
                 </div>
               ))}
             </div>
-            <div className="daily-section"></div>
+
+            <div className="daily-section">
+              <h3>Daily Section</h3>
+              <div className="text-center row g-2">
+                {weatherData.data.daily.map((day) => (
+                  <div className="col-4 col-md-2">
+                    <div className="daily-card rounded d-flex flex-column p-3">
+                      <span>{getWeekDay(day.day)}</span>
+                      <span>
+                        <img
+                          src={weatherCodeToIcon(day.weather_code)}
+                          alt="sunny"
+                          style={{ width: "5rem" }}
+                        />
+                      </span>
+                      <div className="d-flex justify-content-between">
+                        <span>{day.temperature_2m_max}&deg;</span>
+                        <span>{day.temperature_2m_min}&deg;</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="right-column col-12 col-lg-4">

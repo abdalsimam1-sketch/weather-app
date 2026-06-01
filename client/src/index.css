@@ -55,7 +55,8 @@ button {
   border-radius: 2rem;
 }
 
-.current-stat-card {
+.current-stat-card,
+.daily-card {
   background-color: var(--blue-800);
 }
 
