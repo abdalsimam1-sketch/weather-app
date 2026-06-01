@@ -1,0 +1,82 @@
+:root {
+  /* Blue */
+  --blue-500: #4658d9;
+  --blue-750: #2b1b9c;
+  --blue-900: #02012c;
+  --blue-800: #262540;
+  --blue-700: #302f4a;
+  --blue-600: #3c3b5e;
+  --blue-300: #acacb7;
+  --blue-200: #d4d3d9;
+  --white: #ffffff;
+
+  /* Orange */
+  --orange: #ff820a;
+}
+
+.home-page {
+  color: white;
+  background-color: var(--blue-900);
+  min-height: 100vh;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.unit-button {
+  background-color: var(--blue-800);
+}
+.units-dropdown {
+  background-color: var(--blue-800);
+  right: 2rem;
+  top: 3rem;
+}
+.opacity {
+  opacity: 0.4;
+}
+button {
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+}
+.active-unit {
+  background-color: var(--blue-600);
+}
+
+.input-section {
+  max-width: 600px;
+  width: 100%;
+}
+
+.main-weather-section {
+  min-height: 200px;
+  background-image: url(./assets/images/bg-today-small.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
+}
+
+.current-stat-card,
+.daily-card {
+  background-color: var(--blue-700);
+}
+.hourly-card {
+  background-color: var(--blue-800);
+}
+
+.hourly-section {
+  background-color: var(--blue-700);
+  border-radius: 2rem;
+}
+.days-dropdown {
+  background-color: var(--blue-800);
+  right: 2rem;
+  top: 3rem;
+}
+.day-btn.btn {
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  main-weather-section {
+    background-image: url(./assets/images/bg-large-small.svg);
+  }
+}
