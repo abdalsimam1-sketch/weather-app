@@ -2,7 +2,7 @@ import { unitData } from "../data/unitData";
 
 export const Units = ({ unit, switchUnits }) => {
   return (
-    <div className="units-dropdown d-flex gap-3 flex-column position-absolute text-nowrap p-4 rounded">
+    <div className="units-dropdown d-flex gap-3 flex-column position-absolute text-nowrap p-4 rounded z-1">
       <span className="cursor-pointer" onClick={switchUnits}>
         {unit === "metric" ? <>Switch to imperial</> : <>Switch to metric</>}
       </span>

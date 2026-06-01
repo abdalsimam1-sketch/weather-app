@@ -44,7 +44,7 @@ button {
 
 .input-section {
   max-width: 600px;
-  width: 95%;
+  width: 100%;
 }
 
 .main-weather-section {
@@ -57,9 +57,24 @@ button {
 
 .current-stat-card,
 .daily-card {
+  background-color: var(--blue-700);
+}
+.hourly-card {
   background-color: var(--blue-800);
 }
 
+.hourly-section {
+  background-color: var(--blue-700);
+  border-radius: 2rem;
+}
+.days-dropdown {
+  background-color: var(--blue-800);
+  right: 2rem;
+  top: 3rem;
+}
+.day-btn.btn {
+  color: var(--white);
+}
 @media (min-width: 768px) {
   main-weather-section {
     background-image: url(./assets/images/bg-large-small.svg);
