@@ -5,10 +5,13 @@ import { weatherData } from "../data/weatherData";
 import { useState } from "react";
 import sunny from "../assets/images/icon-sunny.webp";
 import { formatFullDate } from "../helper functions/formatDate";
+import { useCurrentStat } from "../hooks/useCurrentStat";
+import { CurrentStatCard } from "../components/CurrentStatCard";
 
 export const Home = () => {
   const { unitOpen, toggleUnits, unit, switchUnits } = useUnit();
   const [inputCity, setInputCity] = useState("");
+  const { currentStats } = useCurrentStat(weatherData.data.current);
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -53,8 +56,8 @@ export const Home = () => {
           </form>
         </section>
 
-        <section className="row main-section">
-          <div className="left-column col-12 col-lg-8">
+        <section className="row main-section ">
+          <div className="left-column col-12 col-lg-8 d-flex flex-column gap-3 ">
             <div className="main-weather-section d-flex flex-column align-items-center flex-md-row justify-content-between align-items-md-center p-5 text-center text-md-start">
               <div className="city-country">
                 <h1 className="text-light">
@@ -69,7 +72,17 @@ export const Home = () => {
               </div>
             </div>
 
-            <div className="current-stats-section"></div>
+            <div className="current-stats-section row g-3">
+              {currentStats.map((item) => (
+                <div key={item.label} className="col-6 col-md-3">
+                  <CurrentStatCard
+                    label={item.label}
+                    value={item.value}
+                    unit={item.unit}
+                  ></CurrentStatCard>
+                </div>
+              ))}
+            </div>
             <div className="daily-section"></div>
           </div>
 
